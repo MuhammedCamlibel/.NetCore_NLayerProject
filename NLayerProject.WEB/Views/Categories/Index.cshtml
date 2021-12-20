@@ -1,0 +1,9 @@
+﻿@model IEnumerable<CategoryDto>
+<a href="/Categories/Add"> Ekle </a>
+
+@foreach (var item in Model)
+{   
+    
+    <h3> @item.Name <a asp-action="Delete" asp-route-id=@item.Id > Sil </a> <a href="/Categories/Update/@item.Id" > Güncelle </a> </h3>
+
+}
